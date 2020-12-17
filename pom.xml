@@ -6,7 +6,7 @@
 
     <groupId>com.wenxiahy</groupId>
     <artifactId>hy-common</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>hy-common</name>
@@ -26,6 +26,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <jackson.version>2.9.9</jackson.version>
+        <spring.version>5.1.8.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -53,6 +54,26 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 
