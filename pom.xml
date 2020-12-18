@@ -6,7 +6,7 @@
 
     <groupId>com.wenxiahy</groupId>
     <artifactId>hy-common</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
 
     <name>hy-common</name>
@@ -25,7 +25,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.10.0</jackson.version>
         <spring.version>5.1.8.RELEASE</spring.version>
     </properties>
 
