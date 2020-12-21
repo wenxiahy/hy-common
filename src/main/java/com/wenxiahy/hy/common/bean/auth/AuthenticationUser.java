@@ -1,11 +1,13 @@
 package com.wenxiahy.hy.common.bean.auth;
 
+import java.io.Serializable;
+
 /**
  * @Author zhouw
  * @Description
  * @Date 2020-12-16
  */
-public class AuthenticationUser {
+public class AuthenticationUser implements Serializable {
 
     private long userId;
 
