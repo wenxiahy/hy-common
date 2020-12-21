@@ -6,7 +6,7 @@
 
     <groupId>com.wenxiahy</groupId>
     <artifactId>hy-common</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>hy-common</name>

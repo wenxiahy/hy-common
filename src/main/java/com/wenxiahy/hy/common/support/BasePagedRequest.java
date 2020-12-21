@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @Description
  * @Date 2020-12-15
  */
-public class BasePagedRequest extends BaseRequest {
+public abstract class BasePagedRequest extends BaseRequest {
 
     @JsonProperty("page_num")
     private int pageNum;

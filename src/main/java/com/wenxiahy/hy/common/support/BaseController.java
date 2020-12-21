@@ -5,7 +5,7 @@ package com.wenxiahy.hy.common.support;
  * @Description
  * @Date 2020-12-15
  */
-public class BaseController {
+public abstract class BaseController {
 
     protected <T> HyResponse<T> ok(T data) {
         return ResponseMapper.ok(data);
