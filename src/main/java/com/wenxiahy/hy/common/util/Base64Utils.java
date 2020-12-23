@@ -123,13 +123,24 @@ public class Base64Utils {
     }
 
     /**
+     * 解密base64字符串
+     *
+     * @param s
+     * @return
+     * @throws Exception
+     */
+    public static String decryptNormalBase64(String s) throws Exception {
+        return new String(decryptNormalBase64Byte(s), "utf-8");
+    }
+
+    /**
      * 解密base64为byte[]
      *
      * @param s
      * @return
      * @throws Exception
      */
-    public static byte[] decryptNormalBase64(String s) throws Exception {
+    public static byte[] decryptNormalBase64Byte(String s) throws Exception {
         return Base64.getDecoder().decode(s.getBytes("utf-8"));
     }
 }

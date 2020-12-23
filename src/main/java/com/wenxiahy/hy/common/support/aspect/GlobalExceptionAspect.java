@@ -40,7 +40,7 @@ public class GlobalExceptionAspect {
             if (t instanceof ErrorArgumentException) {
                 return ResponseMapper.errorArgument(t.getMessage());
             } else {
-                LOGGER.error("Class：{}，Method：{}发生异常：{}", className, method, t.getMessage());
+                LOGGER.error("Class：{}，Method：{}发生异常：{}", className, method, t.toString());
                 t.printStackTrace();
 
                 return ResponseMapper.error(t.toString());
