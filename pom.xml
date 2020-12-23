@@ -6,7 +6,7 @@
 
     <groupId>com.wenxiahy</groupId>
     <artifactId>hy-common</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>jar</packaging>
 
     <name>hy-common</name>
@@ -27,6 +27,7 @@
 
         <jackson.version>2.10.0</jackson.version>
         <spring.version>5.1.8.RELEASE</spring.version>
+        <tomcat.version>9.0.21</tomcat.version>
     </properties>
 
     <dependencies>
@@ -74,6 +75,21 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>${tomcat.version}</version>
         </dependency>
     </dependencies>
 
