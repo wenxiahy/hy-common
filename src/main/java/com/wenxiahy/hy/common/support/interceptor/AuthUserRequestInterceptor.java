@@ -2,7 +2,6 @@ package com.wenxiahy.hy.common.support.interceptor;
 
 import com.wenxiahy.hy.common.bean.auth.AuthenticationUser;
 import com.wenxiahy.hy.common.util.Base64Utils;
-import com.wenxiahy.hy.common.util.HyStringUtils;
 import com.wenxiahy.hy.common.util.JacksonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,14 +21,13 @@ public class AuthUserRequestInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String xor = request.getHeader("X-Auth-User");
-        if (xor == null) {
+        String authData = request.getHeader("X-Auth-User");
+        if (authData == null) {
             return true;
         }
 
         try {
-            String base64Str = HyStringUtils.xorEncry(xor);
-            String authUserJson = Base64Utils.decryptNormalBase64(base64Str);
+            String authUserJson = Base64Utils.decryptNormalBase64(authData);
             AuthenticationUser authUser = JacksonUtils.json2Object(authUserJson, AuthenticationUser.class);
             if (authUser != null) {
                 request.setAttribute("auth_user", authUser);
